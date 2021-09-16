@@ -9,6 +9,20 @@
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+arr.forEach(num => {
+  let out = "";
+  if (num % 3 === 0) {
+    out += "Fizz"
+  }
+  if (num % 5 === 0) {
+    out += "Buzz"
+  }
+  if (out === "") {
+    out = num;
+  }
+  console.log(out);
+})
+
 /* EXPECTED OUTPUT */
 
 /*
