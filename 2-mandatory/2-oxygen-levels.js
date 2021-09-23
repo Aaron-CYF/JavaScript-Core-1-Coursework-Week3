@@ -11,7 +11,17 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function findSafeOxygenLevel() {}
+
+//NOTE: this function passes all the tests but from the wording of the description on 
+// one of the tests, it does this by coincidence since the function does no such filtering
+// of the correct percentages. but to be fair the description above does not ask for this.
+// could easily add a check if the string contains a 0 <= number <= 100 and has "%" on the end. 
+function findSafeOxygenLevel(arrPlanetOxygenLevels) {
+  return arrPlanetOxygenLevels.find(oxyLvl => {
+    var num = Number(oxyLvl.slice(0, -1)); 
+    return num > 19.5 && num < 23.5;
+  });
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

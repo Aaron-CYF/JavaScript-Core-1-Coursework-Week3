@@ -15,7 +15,10 @@
   
 */
 
-function getSettlers() {}
+function getSettlers(arrColonisers) {
+  let out = [...arrColonisers];
+  return out.filter(ppl => ppl[0] === "A" && ppl.slice(-6) === "family");
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
